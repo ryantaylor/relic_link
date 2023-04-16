@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getPersonalStat?profile_ids=%5B8230%5D&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 16 Apr 2023 15:18:12 GMT
+      content-type:
+      - application/json;charset=utf-8
+      content-length:
+      - '1411'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=/RsswRa3Mob0eVNoqcED8OUVFBhuE6YKbKvAU4C+gqdtw4ZYHwjgqfmxBuTPHYV1i2MReF/9EP7IA4OKEQc51jNmaB+iZ7A9fC36GgbH1A8yuBvdYroIRxLOjXWC;
+        Expires=Sun, 23 Apr 2023 15:18:12 GMT; Path=/, AWSALBCORS=/RsswRa3Mob0eVNoqcED8OUVFBhuE6YKbKvAU4C+gqdtw4ZYHwjgqfmxBuTPHYV1i2MReF/9EP7IA4OKEQc51jNmaB+iZ7A9fC36GgbH1A8yuBvdYroIRxLOjXWC;
+        Expires=Sun, 23 Apr 2023 15:18:12 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      cache-control:
+      - public, max-age=5
+      request-path:
+      - "/community/leaderboard/getPersonalStat"
+    body:
+      encoding: UTF-8
+      string: '{"result":{"code":0, "message":"SUCCESS"},"statGroups":[{"id":3408,"name":"","type":1,"members":[{"profile_id":8230,"name":"/steam/76561197999799366","alias":"Inverse","personal_statgroup_id":3408,"xp":1491,"level":1491,"leaderboardregion_id":2074390,"country":"ca"}]}],"leaderboardStats":[{"statgroup_id":3408,"leaderboard_id":2130255,"wins":44,"losses":21,"streak":3,"disputes":0,"drops":0,"rank":106,"ranktotal":2569,"ranklevel":11,"rating":1348,"regionrank":32,"regionranktotal":880,"lastmatchdate":1681431930},{"statgroup_id":3408,"leaderboard_id":2130261,"wins":39,"losses":14,"streak":13,"disputes":0,"drops":0,"rank":83,"ranktotal":2605,"ranklevel":12,"rating":1370,"regionrank":12,"regionranktotal":605,"lastmatchdate":1681430020},{"statgroup_id":3408,"leaderboard_id":2130257,"wins":33,"losses":11,"streak":2,"disputes":0,"drops":0,"rank":152,"ranktotal":2121,"ranklevel":11,"rating":1348,"regionrank":34,"regionranktotal":551,"lastmatchdate":1681432771},{"statgroup_id":3408,"leaderboard_id":2130259,"wins":32,"losses":14,"streak":4,"disputes":0,"drops":0,"rank":127,"ranktotal":2286,"ranklevel":11,"rating":1329,"regionrank":26,"regionranktotal":582,"lastmatchdate":1681431208},{"statgroup_id":3408,"leaderboard_id":2130362,"wins":3,"losses":1,"streak":-1,"disputes":0,"drops":0,"rank":-1,"ranktotal":-1,"ranklevel":-1,"rating":1094,"regionrank":-1,"regionranktotal":-1,"lastmatchdate":1680989997}]}'
+  recorded_at: Sun, 16 Apr 2023 15:18:12 GMT
+recorded_with: VCR 6.1.0

@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getLeaderboard2?leaderboard_id=2130287&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 16 Apr 2023 15:18:25 GMT
+      content-type:
+      - application/json;charset=utf-8
+      content-length:
+      - '94'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=TuSRM2jynAmoFhsKPXFCNqnQONVLCogAY32jXu8ydiwMuK7qkt59qca8nziUEzepkmEu0YJcjApBOlBm8+m9YQRzucIbPtDZO7CZ/emDyeRCOEyVzfywwrB4S4ib;
+        Expires=Sun, 23 Apr 2023 15:18:25 GMT; Path=/, AWSALBCORS=TuSRM2jynAmoFhsKPXFCNqnQONVLCogAY32jXu8ydiwMuK7qkt59qca8nziUEzepkmEu0YJcjApBOlBm8+m9YQRzucIbPtDZO7CZ/emDyeRCOEyVzfywwrB4S4ib;
+        Expires=Sun, 23 Apr 2023 15:18:25 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      cache-control:
+      - public, max-age=60
+      request-path:
+      - "/community/leaderboard/getLeaderboard2"
+    body:
+      encoding: UTF-8
+      string: '{"result":{"code":0, "message":"SUCCESS"},"statGroups":[],"leaderboardStats":[],"rankTotal":0}'
+  recorded_at: Sun, 16 Apr 2023 15:18:25 GMT
+recorded_with: VCR 6.1.0
