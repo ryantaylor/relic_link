@@ -1,5 +1,7 @@
 # RelicLink
 
+[![Documentation](https://img.shields.io/badge/View-Documentation-blue.svg)](https://rubydoc.info/github/ryantaylor/relic_link/v0.1.0)
+
 A client wrapper for Relic APIs. Currently supports the Company of Heroes 3 leaderboard, stats, and recent matches API.
 
 ## Installation
@@ -27,7 +29,7 @@ client.recent_match_history(profile_ids: [8230])
 client.recent_match_history_by_profile_id(8230)
 client.personal_stats(profile_ids: [8230])
 ```
-Consult the documentation for all endpoints that have been discovered and are currently queryable. Note that Relic does not publish official documentation for their endpoints, so the functionality here is based on best estimates and is subject to change without warning. Please open an issue if you are aware of endpoints that are not exposed in this library!
+Consult the [documentation](https://rubydoc.info/github/ryantaylor/relic_link/v0.1.0) for all endpoints that have been discovered and are currently queryable. Note that Relic does not publish official documentation for their endpoints, so the functionality here is based on best estimates and is subject to change without warning. Please open an issue if you are aware of endpoints that are not exposed in this library!
 
 ## Contributing
 
