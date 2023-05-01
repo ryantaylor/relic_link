@@ -1,34 +1,37 @@
 # RelicLink
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/relic_link`. To experiment with that code, run `bin/console` for an interactive prompt.
+A client wrapper for Relic APIs. Currently supports the Company of Heroes 3 leaderboard, stats, and recent matches API.
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Add to Gemfile:
+```
+gem 'relic_link'
+```
+Then run `bundle install`.
 
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
 
 ## Usage
 
-TODO: Write usage instructions here
+Currently the only Relic API supported is the Company of Heroes 3 API (PRs are welcome for other games/APIs though, and others may be added based on resourcing and demand).
 
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+In order to make requests to the API, you need to initialize a client:
+```ruby
+client = RelicLink::Coh3::Client.new
+```
+Then you can make requests to any of the supported CoH3 API endpoints:
+```ruby
+client.available_leaderboards
+client.leaderboard(leaderboard_id: RelicLink::Coh3::Api::Endpoints::Leaderboards::Ids::AMERICAN_1V1)
+client.recent_match_history(profile_ids: [8230])
+client.recent_match_history_by_profile_id(8230)
+client.personal_stats(profile_ids: [8230])
+```
+Consult the documentation for all endpoints that have been discovered and are currently queryable. Note that Relic does not publish official documentation for their endpoints, so the functionality here is based on best estimates and is subject to change without warning. Please open an issue if you are aware of endpoints that are not exposed in this library!
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/relic_link.
+Bug reports and pull requests are welcome on GitHub at https://github.com/ryantaylor/relic_link.
 
 ## License
 

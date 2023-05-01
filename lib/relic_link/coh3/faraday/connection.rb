@@ -3,6 +3,8 @@
 module RelicLink
   module Coh3
     module Faraday
+      # Faraday connection implementation for API requests. You shouldn't
+      # ever have to use this directly.
       module Connection
         private
 

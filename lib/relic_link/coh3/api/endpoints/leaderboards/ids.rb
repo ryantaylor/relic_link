@@ -5,6 +5,11 @@ module RelicLink
     module Api
       module Endpoints
         module Leaderboards
+          # Various leaderboard IDs provided for convenience. Best effort
+          # will be made to ensure these IDs are accurate and up-to-date,
+          # but it's possible Relic changes them in the future. If you
+          # really want to be sure you have accurate IDs, call
+          # {#available_leaderboards}.
           module Ids
             AMERICAN_1V1 = 2130255
             AMERICAN_1V1_UNRANKED = 2130256

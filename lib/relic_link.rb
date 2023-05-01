@@ -9,3 +9,7 @@ require_relative 'relic_link/faraday/request'
 require_relative 'relic_link/coh3/faraday/connection'
 require_relative 'relic_link/coh3/client'
 require_relative 'relic_link/version'
+
+# Relic API client wrappers. To query the CoH3 API see {Coh3::Client}.
+module RelicLink
+end
