@@ -1,6 +1,6 @@
 # RelicLink
 
-[![Documentation](https://img.shields.io/badge/View-Documentation-blue.svg)](https://rubydoc.info/github/ryantaylor/relic_link/v0.1.0)
+[![Gem Version](https://badge.fury.io/rb/relic_link.svg)](https://badge.fury.io/rb/relic_link) [![Documentation](https://img.shields.io/badge/View-Documentation-blue.svg)](https://rubydoc.info/github/ryantaylor/relic_link/v0.1.0)
 
 A client wrapper for Relic APIs. Currently supports the Company of Heroes 3 leaderboard, stats, and recent matches API.
 
