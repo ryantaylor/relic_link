@@ -1,4 +1,4 @@
-name: Ruby
+name: Checks
 
 on:
   pull_request:
@@ -9,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    name: Ruby ${{ matrix.ruby }}
+    name: Tests
     strategy:
       matrix:
         ruby:
@@ -26,7 +26,7 @@ jobs:
 
   lint:
     runs-on: ubuntu-latest
-    name: Ruby ${{ matrix.ruby }}
+    name: Linting
     strategy:
       matrix:
         ruby:
