@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'faraday/mashify'
+
 module RelicLink
   module Coh3
     module Faraday
@@ -15,6 +17,7 @@ module RelicLink
             f.params[:title] = 'coh3'
 
             f.response :logger
+            f.response :mashify
             f.response :json
           end
         end
