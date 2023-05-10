@@ -1,0 +1,42 @@
+name: Checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    name: Tests
+    strategy:
+      matrix:
+        ruby:
+          - '3.2'
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler-cache: true
+    - name: Run tests
+      run: bundle exec rspec
+
+  lint:
+    runs-on: ubuntu-latest
+    name: Linting
+    strategy:
+      matrix:
+        ruby:
+          - '3.2'
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ matrix.ruby }}
+          bundler-cache: true
+      - name: Run Rubocop
+        run: bundle exec rubocop
