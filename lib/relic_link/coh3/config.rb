@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module RelicLink
+  # Company of Heroes 3 API wrapper.
   module Coh3
     # Configuration options for the CoH3 API client.
     module Config
@@ -17,6 +18,8 @@ module RelicLink
       def reset
         self.logger = nil
       end
+
+      module_function :reset
     end
 
     class << self
