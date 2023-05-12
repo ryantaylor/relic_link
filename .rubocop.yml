@@ -5,5 +5,11 @@ AllCops:
 Metrics/BlockLength:
   Enabled: false
 
+Style/GlobalStdStream:
+  Enabled: false
+
+Style/ModuleFunction:
+  Enabled: false
+
 Style/NumericLiterals:
   Enabled: false

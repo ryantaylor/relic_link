@@ -16,7 +16,7 @@ module RelicLink
           ) do |f|
             f.params[:title] = 'coh3'
 
-            f.response :logger
+            f.response :logger, logger if logger
             f.response :mashify
             f.response :json
           end
