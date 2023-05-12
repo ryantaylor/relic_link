@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    relic_link (0.1.1)
+    relic_link (0.1.2)
       faraday (~> 2.7)
       faraday-mashify (~> 0.1)
       hashie (~> 5.0)
