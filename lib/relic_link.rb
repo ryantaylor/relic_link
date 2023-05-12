@@ -1,7 +1,11 @@
 # frozen_string_literal: true
 
 require 'faraday'
+require 'hashie'
 require 'json'
+
+require_relative 'relic_link/logger'
+require_relative 'relic_link/coh3/config'
 
 require_relative 'relic_link/coh3/util'
 require_relative 'relic_link/coh3/api/endpoints'

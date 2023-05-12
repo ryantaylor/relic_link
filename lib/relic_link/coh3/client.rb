@@ -13,6 +13,34 @@ module RelicLink
       include Faraday::Connection
       include Api::Endpoints
       include Util
+
+      attr_accessor(*RelicLink::Coh3::Config::ATTRIBUTES)
+
+      # Initializes a new client.
+      #
+      # @option options [Logger] :logger
+      #   Instance of a logging class. If not provided, defaults to +STDOUT+ at +Logging::WARN+.
+      #
+      # @return [Client]
+      def initialize(options = {})
+        RelicLink::Coh3::Config::ATTRIBUTES.each do |key|
+          send("#{key}=", options.fetch(key, RelicLink::Coh3.config.send(key)))
+        end
+        @logger ||= RelicLink::Coh3::Config.logger || RelicLink::Logger.default
+      end
+
+      class << self
+        # Set configuration options. Can be set on the returned object
+        # directly or in a block.
+        def configure
+          block_given? ? yield(RelicLink::Coh3::Config) : RelicLink::Coh3::Config
+        end
+
+        # Current config module.
+        def config
+          RelicLink::Coh3::Config
+        end
+      end
     end
   end
 end
