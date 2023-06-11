@@ -287,6 +287,22 @@ RSpec.describe RelicLink do
           end
         end
       end
+
+      context 'when leaderboard ID is invalid' do
+        it 'raises an error' do
+          VCR.use_cassette("leaderboard_id_invalid") do
+            expect { client.leaderboard(leaderboard_id: -1) }.to raise_error(RelicLink::Coh3::Api::Errors::NotFound)
+          end
+        end
+      end
+
+      context 'when leaderboard ID is of an incorrect format' do
+        it 'raises an error' do
+          VCR.use_cassette("leaderboard_id_format_error") do
+            expect { client.leaderboard(leaderboard_id: 'butts') }.to raise_error(RelicLink::Errors::BadRequestError)
+          end
+        end
+      end
     end
   end
 end
