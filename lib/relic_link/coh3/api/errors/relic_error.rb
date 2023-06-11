@@ -4,6 +4,7 @@ module RelicLink
   module Coh3
     module Api
       module Errors
+        # Base wrapper for Relic CoH3 API errors.
         class RelicError < ::Faraday::Error
           attr_reader :response
 

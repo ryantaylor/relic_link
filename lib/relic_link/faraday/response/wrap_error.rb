@@ -3,8 +3,9 @@
 module RelicLink
   module Faraday
     module Response
+      # Middleware to wrap generic API errors and raise them as exceptions.
       class WrapError < ::Faraday::Middleware
-        UNAVAILABLE_ERROR_STATUSES = (500..599).freeze
+        UNAVAILABLE_ERROR_STATUSES = (500..599)
 
         def on_complete(env)
           return unless UNAVAILABLE_ERROR_STATUSES.cover?(env.status)

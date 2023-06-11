@@ -4,6 +4,7 @@ module RelicLink
   module Coh3
     module Faraday
       module Response
+        # Middleware to catch CoH3 API errors and raise them as exceptions.
         class RaiseError < ::Faraday::Middleware
           def on_complete(env)
             raise RelicLink::Errors::BadRequestError, env.response if env.status == 400
