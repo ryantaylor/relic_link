@@ -16,9 +16,11 @@ module RelicLink
           ) do |f|
             f.params[:title] = 'coh3'
 
-            f.response :logger, logger if logger
+            f.use ::RelicLink::Coh3::Faraday::Response::RaiseError
             f.response :mashify
             f.response :json
+            f.use ::RelicLink::Faraday::Response::WrapError
+            f.response :logger, logger if logger
           end
         end
       end
