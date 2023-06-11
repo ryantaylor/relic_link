@@ -10,6 +10,8 @@ module RelicLink
         # Endpoint definitions for the CoH3 leaderboards API.
         module Leaderboards
           # List available leaderboards and associated metadata.
+          #
+          # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
           def available_leaderboards
             get('getAvailableLeaderboards')
           end
@@ -31,6 +33,10 @@ module RelicLink
           #   Field to sort the leaderboard entries by.
           #
           # @raise [ArgumentError] if the required parameters aren't provided.
+          # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
+          # @raise [Errors::NotFound] if +leaderboard_id+ does not correspond to a leaderboard.
+          # @raise [RelicLink::Errors::BadRequestError] if +start+, +count+, or +sort_by+ are outside the
+          #   limits enumerated above.
           def leaderboard(options = {})
             raise ArgumentError, 'Required argument :leaderboard_id missing' if options[:leaderboard_id].nil?
 

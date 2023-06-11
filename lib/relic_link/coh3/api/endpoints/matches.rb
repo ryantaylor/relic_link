@@ -22,6 +22,11 @@ module RelicLink
           #   be in the format +/steam/<ID>+ (one of required).
           #
           # @raise [ArgumentError] if none of the required parameters are provided.
+          # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
+          # @raise [Errors::UnknownProfileIds] if no values in +profile_ids+ match known profile IDs.
+          # @raise [Errors::UnknownAliases] if no values in +aliases+ match known aliases.
+          # @raise [Errors::UnregisteredProfileName] if no values in +profile_names+ match known profile names.
+          # @raise [RelicLink::Errors::BadRequestError] if inputs violate type constraints.
           def recent_match_history(options = {})
             unless options.keys.intersect?(%i[profile_ids aliases profile_names])
               raise ArgumentError, 'Missing one of required arguments :profile_ids, :aliases, or :profile_names'
@@ -39,6 +44,7 @@ module RelicLink
           # @param profile_id [Integer] Internal Relic ID of player whose stats you wish to retrieve (required).
           #
           # @raise [ArgumentError] if no +profile_id+ provided.
+          # @raise [RelicLink::Errors::BadRequestError] if input violates type constraints.
           def recent_match_history_by_profile_id(profile_id)
             raise ArgumentError, 'Required argument :profile_id missing' if profile_id.nil?
 
