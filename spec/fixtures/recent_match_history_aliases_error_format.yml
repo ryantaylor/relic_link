@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getRecentMatchHistory?aliases=%5B-1%5D&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 11 Jun 2023 18:15:42 GMT
+      content-type:
+      - application/json;charset=utf-8
+      content-length:
+      - '51'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=MkBCCZivjfrBy0j8+GUkUZXFnIGA1cCfzYsXvaK0zYtyzGa7HXcMGDOMrr2JBQAMHAihkeQI/7fZAymcmigIXiT+dx1lSzduvHNvDTnfD7wUgtcW0yER8oEuatby;
+        Expires=Sun, 18 Jun 2023 18:15:42 GMT; Path=/, AWSALBCORS=MkBCCZivjfrBy0j8+GUkUZXFnIGA1cCfzYsXvaK0zYtyzGa7HXcMGDOMrr2JBQAMHAihkeQI/7fZAymcmigIXiT+dx1lSzduvHNvDTnfD7wUgtcW0yER8oEuatby;
+        Expires=Sun, 18 Jun 2023 18:15:42 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      cache-control:
+      - public, max-age=5
+      request-path:
+      - "/community/leaderboard/getRecentMatchHistory"
+    body:
+      encoding: UTF-8
+      string: '{"result":{"code":10, "message":"UNKNOWN_ALIASES"}}'
+  recorded_at: Sun, 11 Jun 2023 18:15:42 GMT
+recorded_with: VCR 6.1.0

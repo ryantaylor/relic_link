@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getPersonalStat?profile_ids=%5B-1%5D&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 11 Jun 2023 17:57:09 GMT
+      content-type:
+      - application/json;charset=utf-8
+      content-length:
+      - '54'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=1Uu5tlFLI2/dp1BRq4AVjBLmrr4lpTTgQLDQ/LUffhbBs4ZrGorLB5jSzTg8VVex8dtXg/ZYmEe5UluT38tlyw/3788yt3JtS55LG+FFgGmtedLaZPWl4/DtOAzw;
+        Expires=Sun, 18 Jun 2023 17:57:09 GMT; Path=/, AWSALBCORS=1Uu5tlFLI2/dp1BRq4AVjBLmrr4lpTTgQLDQ/LUffhbBs4ZrGorLB5jSzTg8VVex8dtXg/ZYmEe5UluT38tlyw/3788yt3JtS55LG+FFgGmtedLaZPWl4/DtOAzw;
+        Expires=Sun, 18 Jun 2023 17:57:09 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      cache-control:
+      - public, max-age=5
+      request-path:
+      - "/community/leaderboard/getPersonalStat"
+    body:
+      encoding: UTF-8
+      string: '{"result":{"code":6, "message":"UNKNOWN_PROFILE_IDS"}}'
+  recorded_at: Sun, 11 Jun 2023 17:57:09 GMT
+recorded_with: VCR 6.1.0

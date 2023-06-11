@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getLeaderboard2?count=100&leaderboard_id=2130296&sortBy=-1&start=1&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      date:
+      - Sun, 11 Jun 2023 18:25:10 GMT
+      content-type:
+      - text/html;charset=iso-8859-1
+      content-length:
+      - '573'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=Okgb4KIG85iY+EyKHEjyEVxvOywvwJ4jOCEZQdvyVAkEPrPIZ3HPTg9zC6r05vv7DxnDLo55fr2wu9FM53faohBv4Orf0rydzSoQsXmSlt9V8rpZ292QKRj2krKl;
+        Expires=Sun, 18 Jun 2023 18:25:10 GMT; Path=/, AWSALBCORS=Okgb4KIG85iY+EyKHEjyEVxvOywvwJ4jOCEZQdvyVAkEPrPIZ3HPTg9zC6r05vv7DxnDLo55fr2wu9FM53faohBv4Orf0rydzSoQsXmSlt9V8rpZ292QKRj2krKl;
+        Expires=Sun, 18 Jun 2023 18:25:10 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      request-path:
+      - "/community/leaderboard/getLeaderboard2"
+      cache-control:
+      - must-revalidate,no-cache,no-store
+    body:
+      encoding: ISO-8859-1
+      string: |
+        <html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+        <title>Error 400 Error for param sortby=-1 : Must be in the range(0, 2), but got -1</title>
+        </head>
+        <body><h2>HTTP ERROR 400 Error for param sortby=-1 : Must be in the range(0, 2), but got -1</h2>
+        <table>
+        <tr><th>URI:</th><td>/community/leaderboard/getLeaderboard2</td></tr>
+        <tr><th>STATUS:</th><td>400</td></tr>
+        <tr><th>MESSAGE:</th><td>Error for param sortby=-1 : Must be in the range(0, 2), but got -1</td></tr>
+        <tr><th>SERVLET:</th><td>worldwide</td></tr>
+        </table>
+
+        </body>
+        </html>
+  recorded_at: Sun, 11 Jun 2023 18:25:10 GMT
+recorded_with: VCR 6.1.0

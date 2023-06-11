@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getPersonalStat?aliases=%5B-1%5D&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 11 Jun 2023 18:13:48 GMT
+      content-type:
+      - application/json;charset=utf-8
+      content-length:
+      - '50'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=mE7pG5KXGbDTGirV9nnwuqDsy73CMIQ6yvxFG6CnfCVwWDa5SO0bRqzqBJ8kp6jmlxdnvJBm2fPEkKwK+zIAUF3kWuLghmLzM6v8BTCGLQIA8SlUQpXJD0OOZfKA;
+        Expires=Sun, 18 Jun 2023 18:13:48 GMT; Path=/, AWSALBCORS=mE7pG5KXGbDTGirV9nnwuqDsy73CMIQ6yvxFG6CnfCVwWDa5SO0bRqzqBJ8kp6jmlxdnvJBm2fPEkKwK+zIAUF3kWuLghmLzM6v8BTCGLQIA8SlUQpXJD0OOZfKA;
+        Expires=Sun, 18 Jun 2023 18:13:48 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      cache-control:
+      - public, max-age=5
+      request-path:
+      - "/community/leaderboard/getPersonalStat"
+    body:
+      encoding: UTF-8
+      string: '{"result":{"code":9, "message":"UNKNOWN_ALIASES"}}'
+  recorded_at: Sun, 11 Jun 2023 18:13:48 GMT
+recorded_with: VCR 6.1.0

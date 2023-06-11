@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getRecentMatchHistory?profile_ids=%5B%22butts%22%5D&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      date:
+      - Sun, 11 Jun 2023 18:15:42 GMT
+      content-type:
+      - text/html;charset=iso-8859-1
+      content-length:
+      - '552'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=fn8oOisVndKSOcwZCdRR5lDqsu1vzdvSOf+CTpKsRT0UdJr+3UvFro2UAsunm9CHh4m4HVIJ8PawywSio7u9+Xyea+rWnDN3Q8BH6NkZ7/bXTTi0DVWhJCVDVcCV;
+        Expires=Sun, 18 Jun 2023 18:15:42 GMT; Path=/, AWSALBCORS=fn8oOisVndKSOcwZCdRR5lDqsu1vzdvSOf+CTpKsRT0UdJr+3UvFro2UAsunm9CHh4m4HVIJ8PawywSio7u9+Xyea+rWnDN3Q8BH6NkZ7/bXTTi0DVWhJCVDVcCV;
+        Expires=Sun, 18 Jun 2023 18:15:42 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      request-path:
+      - "/community/leaderboard/getRecentMatchHistory"
+      cache-control:
+      - must-revalidate,no-cache,no-store
+    body:
+      encoding: ISO-8859-1
+      string: |
+        <html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+        <title>Error 400 Error for param profile_ids=butts : Must be an long value</title>
+        </head>
+        <body><h2>HTTP ERROR 400 Error for param profile_ids=butts : Must be an long value</h2>
+        <table>
+        <tr><th>URI:</th><td>/community/leaderboard/getRecentMatchHistory</td></tr>
+        <tr><th>STATUS:</th><td>400</td></tr>
+        <tr><th>MESSAGE:</th><td>Error for param profile_ids=butts : Must be an long value</td></tr>
+        <tr><th>SERVLET:</th><td>worldwide</td></tr>
+        </table>
+
+        </body>
+        </html>
+  recorded_at: Sun, 11 Jun 2023 18:15:42 GMT
+recorded_with: VCR 6.1.0

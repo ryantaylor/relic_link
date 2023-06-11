@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getRecentMatchHistory?profile_names=%5B%22%2Fsteam%2F-1%22%5D&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 11 Jun 2023 18:01:21 GMT
+      content-type:
+      - application/json;charset=utf-8
+      content-length:
+      - '60'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=h3Be2QmFGnOvufvI7yRp2eApHicvzN7yNviCdw0lA6DuFcrcpvhwg6HYltKmQMC96r+PUmnzI1+9pJ+21fs9W6JTu1POPPdEyUVLzMCXMgwasfuqmM2x8tHqxsMo;
+        Expires=Sun, 18 Jun 2023 18:01:21 GMT; Path=/, AWSALBCORS=h3Be2QmFGnOvufvI7yRp2eApHicvzN7yNviCdw0lA6DuFcrcpvhwg6HYltKmQMC96r+PUmnzI1+9pJ+21fs9W6JTu1POPPdEyUVLzMCXMgwasfuqmM2x8tHqxsMo;
+        Expires=Sun, 18 Jun 2023 18:01:21 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      cache-control:
+      - public, max-age=5
+      request-path:
+      - "/community/leaderboard/getRecentMatchHistory"
+    body:
+      encoding: UTF-8
+      string: '{"result":{"code":5, "message":"UNREGISTERED_PROFILE_NAME"}}'
+  recorded_at: Sun, 11 Jun 2023 18:01:21 GMT
+recorded_with: VCR 6.1.0
