@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getLeaderboard2?count=100&leaderboard_id=2130321&sortBy=1&start=999999999999999999999999999&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      date:
+      - Sun, 11 Jun 2023 18:24:05 GMT
+      content-type:
+      - text/html;charset=iso-8859-1
+      content-length:
+      - '603'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=qRsEvAWUiJyZx1g5lgqsP9wkSbaBpTQXvf7Fw54/P4di/R7mdBFWJNFhBwr7Db6FUipuCpIaKVAw4nPRGUqbv2nPbA7yPXPBTTNt5pMT3rOPDXmNp4pHkkNXwLKZ;
+        Expires=Sun, 18 Jun 2023 18:24:05 GMT; Path=/, AWSALBCORS=qRsEvAWUiJyZx1g5lgqsP9wkSbaBpTQXvf7Fw54/P4di/R7mdBFWJNFhBwr7Db6FUipuCpIaKVAw4nPRGUqbv2nPbA7yPXPBTTNt5pMT3rOPDXmNp4pHkkNXwLKZ;
+        Expires=Sun, 18 Jun 2023 18:24:05 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      request-path:
+      - "/community/leaderboard/getLeaderboard2"
+      cache-control:
+      - must-revalidate,no-cache,no-store
+    body:
+      encoding: ISO-8859-1
+      string: |
+        <html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+        <title>Error 400 Error for param start=999999999999999999999999999 : Must be an integer value</title>
+        </head>
+        <body><h2>HTTP ERROR 400 Error for param start=999999999999999999999999999 : Must be an integer value</h2>
+        <table>
+        <tr><th>URI:</th><td>/community/leaderboard/getLeaderboard2</td></tr>
+        <tr><th>STATUS:</th><td>400</td></tr>
+        <tr><th>MESSAGE:</th><td>Error for param start=999999999999999999999999999 : Must be an integer value</td></tr>
+        <tr><th>SERVLET:</th><td>worldwide</td></tr>
+        </table>
+
+        </body>
+        </html>
+  recorded_at: Sun, 11 Jun 2023 18:24:05 GMT
+recorded_with: VCR 6.1.0

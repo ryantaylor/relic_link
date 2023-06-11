@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getLeaderboard2?leaderboard_id=butts&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      date:
+      - Sun, 11 Jun 2023 18:40:27 GMT
+      content-type:
+      - text/html;charset=iso-8859-1
+      content-length:
+      - '555'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=sK2vq/YbjYoZZagiqAgKfiJTBkcM0OWg6Lj9NdLgXMnFGW3sfVOlnPifN2DK1ZrBwwmeMsIP/Fl48W4fKyDvGm7O5VdjVinANav0OgEoMUNq6AzLI5TytEY/Jml9;
+        Expires=Sun, 18 Jun 2023 18:40:27 GMT; Path=/, AWSALBCORS=sK2vq/YbjYoZZagiqAgKfiJTBkcM0OWg6Lj9NdLgXMnFGW3sfVOlnPifN2DK1ZrBwwmeMsIP/Fl48W4fKyDvGm7O5VdjVinANav0OgEoMUNq6AzLI5TytEY/Jml9;
+        Expires=Sun, 18 Jun 2023 18:40:27 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      request-path:
+      - "/community/leaderboard/getLeaderboard2"
+      cache-control:
+      - must-revalidate,no-cache,no-store
+    body:
+      encoding: ISO-8859-1
+      string: |
+        <html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+        <title>Error 400 Error for param leaderboard_id=butts : Must be an long value</title>
+        </head>
+        <body><h2>HTTP ERROR 400 Error for param leaderboard_id=butts : Must be an long value</h2>
+        <table>
+        <tr><th>URI:</th><td>/community/leaderboard/getLeaderboard2</td></tr>
+        <tr><th>STATUS:</th><td>400</td></tr>
+        <tr><th>MESSAGE:</th><td>Error for param leaderboard_id=butts : Must be an long value</td></tr>
+        <tr><th>SERVLET:</th><td>worldwide</td></tr>
+        </table>
+
+        </body>
+        </html>
+  recorded_at: Sun, 11 Jun 2023 18:40:27 GMT
+recorded_with: VCR 6.1.0

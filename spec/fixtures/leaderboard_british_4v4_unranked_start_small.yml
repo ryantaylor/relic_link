@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getLeaderboard2?count=100&leaderboard_id=2130357&sortBy=1&start=-1&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      date:
+      - Sun, 11 Jun 2023 18:24:06 GMT
+      content-type:
+      - text/html;charset=iso-8859-1
+      content-length:
+      - '597'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=I0NyszA/fJ1U2EZXKfeeAw1mWVhbA2R4OA9cedvFCeeQURaUG4OA/Itcd4qos9tkF/3WeMGB8e/VyYr+UwcYlPgcksYVqxDwNzZ5jsy3PsXaxei69fcl0QzI98ZY;
+        Expires=Sun, 18 Jun 2023 18:24:06 GMT; Path=/, AWSALBCORS=I0NyszA/fJ1U2EZXKfeeAw1mWVhbA2R4OA9cedvFCeeQURaUG4OA/Itcd4qos9tkF/3WeMGB8e/VyYr+UwcYlPgcksYVqxDwNzZ5jsy3PsXaxei69fcl0QzI98ZY;
+        Expires=Sun, 18 Jun 2023 18:24:06 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      request-path:
+      - "/community/leaderboard/getLeaderboard2"
+      cache-control:
+      - must-revalidate,no-cache,no-store
+    body:
+      encoding: ISO-8859-1
+      string: |
+        <html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+        <title>Error 400 Error for param start=-1 : Must be in the range(1, 2147483647), but got -1</title>
+        </head>
+        <body><h2>HTTP ERROR 400 Error for param start=-1 : Must be in the range(1, 2147483647), but got -1</h2>
+        <table>
+        <tr><th>URI:</th><td>/community/leaderboard/getLeaderboard2</td></tr>
+        <tr><th>STATUS:</th><td>400</td></tr>
+        <tr><th>MESSAGE:</th><td>Error for param start=-1 : Must be in the range(1, 2147483647), but got -1</td></tr>
+        <tr><th>SERVLET:</th><td>worldwide</td></tr>
+        </table>
+
+        </body>
+        </html>
+  recorded_at: Sun, 11 Jun 2023 18:24:06 GMT
+recorded_with: VCR 6.1.0

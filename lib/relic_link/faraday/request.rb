@@ -9,6 +9,8 @@ module RelicLink
         connection.get(path) do |req|
           req.params = req.params.merge(options)
         end.body
+      rescue ::Faraday::ParsingError => e
+        raise RelicLink::Errors::ParsingError, e.response
       end
     end
   end

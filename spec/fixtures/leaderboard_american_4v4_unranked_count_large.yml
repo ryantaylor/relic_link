@@ -1,0 +1,54 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getLeaderboard2?count=9999&leaderboard_id=2130354&sortBy=1&start=1&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      date:
+      - Sun, 11 Jun 2023 18:21:46 GMT
+      content-type:
+      - text/html;charset=iso-8859-1
+      content-length:
+      - '588'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=HYTG49akQApXHN9QumK8UcDDYZ6LiP4GL/jDjwTjiK2HJ46yRGsQRpzFIQq07EonXY98LRNqAhXC+3cH7yo3K9bicW/Lz0mKuHcVgdqXQ/7XPFiNab1G2vHzJ3Nu;
+        Expires=Sun, 18 Jun 2023 18:21:46 GMT; Path=/, AWSALBCORS=HYTG49akQApXHN9QumK8UcDDYZ6LiP4GL/jDjwTjiK2HJ46yRGsQRpzFIQq07EonXY98LRNqAhXC+3cH7yo3K9bicW/Lz0mKuHcVgdqXQ/7XPFiNab1G2vHzJ3Nu;
+        Expires=Sun, 18 Jun 2023 18:21:46 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      request-path:
+      - "/community/leaderboard/getLeaderboard2"
+      cache-control:
+      - must-revalidate,no-cache,no-store
+    body:
+      encoding: ISO-8859-1
+      string: |
+        <html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+        <title>Error 400 Error for param count=9999 : Must be in the range(1, 200), but got 9999</title>
+        </head>
+        <body><h2>HTTP ERROR 400 Error for param count=9999 : Must be in the range(1, 200), but got 9999</h2>
+        <table>
+        <tr><th>URI:</th><td>/community/leaderboard/getLeaderboard2</td></tr>
+        <tr><th>STATUS:</th><td>400</td></tr>
+        <tr><th>MESSAGE:</th><td>Error for param count=9999 : Must be in the range(1, 200), but got 9999</td></tr>
+        <tr><th>SERVLET:</th><td>worldwide</td></tr>
+        </table>
+
+        </body>
+        </html>
+  recorded_at: Sun, 11 Jun 2023 18:21:46 GMT
+recorded_with: VCR 6.1.0

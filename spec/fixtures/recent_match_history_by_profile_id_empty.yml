@@ -1,0 +1,39 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/community/leaderboard/getRecentMatchHistoryByProfileId?profile_id=-1&title=coh3
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.7.4
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Sun, 11 Jun 2023 18:12:56 GMT
+      content-type:
+      - application/json;charset=utf-8
+      content-length:
+      - '79'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=j6Qkqn0aMz9hY2vyg/UKHA44797iWsNLz7SxqJRDJxS37futGWfOAas705yj9F2hNXKoEveY5JRueRT7bHA80YPFT86raOYbRwi7itZM/12zdZsPFMDzVIJ9cLew;
+        Expires=Sun, 18 Jun 2023 18:12:56 GMT; Path=/, AWSALBCORS=j6Qkqn0aMz9hY2vyg/UKHA44797iWsNLz7SxqJRDJxS37futGWfOAas705yj9F2hNXKoEveY5JRueRT7bHA80YPFT86raOYbRwi7itZM/12zdZsPFMDzVIJ9cLew;
+        Expires=Sun, 18 Jun 2023 18:12:56 GMT; Path=/; SameSite=None; Secure
+      p3p:
+      - CP="Void P3P Policy for legacy browsers"
+      cache-control:
+      - public, max-age=5
+      request-path:
+      - "/community/leaderboard/getRecentMatchHistoryByProfileId"
+    body:
+      encoding: UTF-8
+      string: '{"result":{"code":0, "message":"SUCCESS"},"matchHistoryStats":[],"profiles":[]}'
+  recorded_at: Sun, 11 Jun 2023 18:12:56 GMT
+recorded_with: VCR 6.1.0
