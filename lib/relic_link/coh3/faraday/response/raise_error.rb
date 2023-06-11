@@ -13,11 +13,10 @@ module RelicLink
             body = env.body
             return unless body
 
-            code = body['result']['code']
-            return if code.zero?
+            return if body['result']['code'].zero?
 
             error_message = body['result']['message']
-            error_class = RelicLink::Coh3::Api::Errors::ERROR_CLASSES[code]
+            error_class = RelicLink::Coh3::Api::Errors::ERROR_CLASSES[error_message]
             error_class ||= RelicLink::Coh3::Api::Errors::RelicError
             raise error_class.new(error_message, env.response)
           end
