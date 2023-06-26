@@ -11,4 +11,4 @@ gem 'rspec', '~> 3.0'
 
 gem 'rubocop', '~> 1.53'
 
-gem 'vcr', '~> 6.1'
+gem 'vcr', '~> 6.2'
