@@ -20,6 +20,7 @@ GEM
     faraday-net_http (3.0.2)
     hashie (5.0.0)
     json (2.6.3)
+    language_server-protocol (3.17.0.3)
     parallel (1.23.0)
     parser (3.2.2.3)
       ast (~> 2.4.1)
@@ -42,8 +43,9 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-support (3.12.0)
-    rubocop (1.52.1)
+    rubocop (1.53.1)
       json (~> 2.3)
+      language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
       parser (>= 3.2.2.3)
       rainbow (>= 2.2.2, < 4.0)
@@ -67,7 +69,7 @@ DEPENDENCIES
   rake (~> 13.0)
   relic_link!
   rspec (~> 3.0)
-  rubocop (~> 1.52)
+  rubocop (~> 1.53)
   vcr (~> 6.1)
 
 BUNDLED WITH
