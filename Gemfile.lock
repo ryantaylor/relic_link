@@ -59,7 +59,7 @@ GEM
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
     unicode-display_width (2.4.2)
-    vcr (6.1.0)
+    vcr (6.2.0)
 
 PLATFORMS
   arm64-darwin-21
@@ -70,7 +70,7 @@ DEPENDENCIES
   relic_link!
   rspec (~> 3.0)
   rubocop (~> 1.53)
-  vcr (~> 6.1)
+  vcr (~> 6.2)
 
 BUNDLED WITH
    2.4.7
