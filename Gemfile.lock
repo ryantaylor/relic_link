@@ -10,6 +10,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    base64 (0.1.1)
     diff-lcs (1.5.0)
     faraday (2.7.10)
       faraday-net_http (>= 2.0, < 3.1)
@@ -43,7 +44,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-support (3.12.1)
-    rubocop (1.55.1)
+    rubocop (1.56.3)
+      base64 (~> 0.1.1)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -69,7 +71,7 @@ DEPENDENCIES
   rake (~> 13.0)
   relic_link!
   rspec (~> 3.0)
-  rubocop (~> 1.55)
+  rubocop (~> 1.56)
   vcr (~> 6.2)
 
 BUNDLED WITH
