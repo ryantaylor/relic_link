@@ -58,7 +58,7 @@ GEM
       parser (>= 3.2.1.0)
     ruby-progressbar (1.13.0)
     ruby2_keywords (0.0.5)
-    unicode-display_width (2.4.2)
+    unicode-display_width (2.5.0)
     vcr (6.2.0)
 
 PLATFORMS
