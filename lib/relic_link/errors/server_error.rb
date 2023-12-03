@@ -8,7 +8,7 @@ module RelicLink
 
       def initialize(message, response)
         @response = response
-        super message
+        super(message)
       end
     end
 
