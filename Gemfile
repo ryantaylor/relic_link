@@ -9,6 +9,6 @@ gem 'rake', '~> 13.1'
 
 gem 'rspec', '~> 3.13'
 
-gem 'rubocop', '~> 1.60'
+gem 'rubocop', '~> 1.61'
 
 gem 'vcr', '~> 6.2'
