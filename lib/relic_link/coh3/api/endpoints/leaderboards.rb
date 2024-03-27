@@ -45,7 +45,7 @@ module RelicLink
             get('getLeaderboard2', format_sort_key(options))
           end
 
-          private
+        private
 
           def format_sort_key(options)
             options.transform_keys do |key|

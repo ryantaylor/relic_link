@@ -17,6 +17,12 @@ module RelicLink
 
             return if body['result']['code'].zero?
 
+            raise_relic_error!(body, env)
+          end
+
+        private
+
+          def raise_relic_error!(body, env)
             error_message = body['result']['message']
             error_class = RelicLink::Coh3::Api::Errors::ERROR_CLASSES[error_message]
             error_class ||= RelicLink::Coh3::Api::Errors::RelicError
