@@ -8,6 +8,7 @@ module RelicLink
         class RaiseError < ::Faraday::Middleware
           def on_complete(env)
             raise RelicLink::Errors::BadRequestError, env.response if env.status == 400
+            raise RelicLink::Errors::RateLimitError, env.response if env.status == 429
 
             return unless env.success?
 
