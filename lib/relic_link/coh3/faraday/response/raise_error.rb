@@ -8,6 +8,7 @@ module RelicLink
         class RaiseError < ::Faraday::Middleware
           def on_complete(env)
             raise RelicLink::Errors::BadRequestError, env.response if env.status == 400
+            raise RelicLink::Errors::RateLimitError, env.response if env.status == 429
 
             return unless env.success?
 
@@ -16,6 +17,12 @@ module RelicLink
 
             return if body['result']['code'].zero?
 
+            raise_relic_error!(body, env)
+          end
+
+        private
+
+          def raise_relic_error!(body, env)
             error_message = body['result']['message']
             error_class = RelicLink::Coh3::Api::Errors::ERROR_CLASSES[error_message]
             error_class ||= RelicLink::Coh3::Api::Errors::RelicError

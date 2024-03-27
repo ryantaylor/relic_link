@@ -29,6 +29,13 @@ module RelicLink
       end
     end
 
+    # Raised when a 429 is returned in an API response.
+    class RateLimitError < HttpRequestError
+      def initialize(response)
+        super('rate_limited', response)
+      end
+    end
+
     # Raised when an API request times out.
     class TimeoutError < HttpRequestError
       def initialize(response)

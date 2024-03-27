@@ -12,6 +12,7 @@ module RelicLink
           # List available leaderboards and associated metadata.
           #
           # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
+          # @raise [RelicLink::Errors::RateLimitError] if you're rate-limited.
           def available_leaderboards
             get('getAvailableLeaderboards')
           end
@@ -34,6 +35,7 @@ module RelicLink
           #
           # @raise [ArgumentError] if the required parameters aren't provided.
           # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
+          # @raise [RelicLink::Errors::RateLimitError] if you're rate-limited.
           # @raise [Errors::NotFound] if +leaderboard_id+ does not correspond to a leaderboard.
           # @raise [RelicLink::Errors::BadRequestError] if +start+, +count+, or +sort_by+ are outside the
           #   limits enumerated above.
@@ -43,7 +45,7 @@ module RelicLink
             get('getLeaderboard2', format_sort_key(options))
           end
 
-          private
+        private
 
           def format_sort_key(options)
             options.transform_keys do |key|

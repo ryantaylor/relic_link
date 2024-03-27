@@ -8,7 +8,7 @@ module RelicLink
       # Faraday connection implementation for API requests. You shouldn't
       # ever have to use this directly.
       module Connection
-        private
+      private
 
         def connection
           @connection ||= ::Faraday.new(

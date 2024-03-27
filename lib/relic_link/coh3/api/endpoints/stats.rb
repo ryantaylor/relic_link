@@ -23,6 +23,7 @@ module RelicLink
           #
           # @raise [ArgumentError] if none of the required parameters are provided.
           # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
+          # @raise [RelicLink::Errors::RateLimitError] if you're rate-limited.
           # @raise [Errors::UnknownProfileIds] if no values in +profile_ids+ match known profile IDs.
           # @raise [Errors::UnknownAliases] if no values in +aliases+ match known aliases.
           # @raise [Errors::UnregisteredProfileName] if no values in +profile_names+ match known profile names.
