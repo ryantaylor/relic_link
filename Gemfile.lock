@@ -29,7 +29,7 @@ GEM
       racc
     racc (1.7.3)
     rainbow (3.1.1)
-    rake (13.1.0)
+    rake (13.2.0)
     regexp_parser (2.9.0)
     rexml (3.2.6)
     rspec (3.13.0)
@@ -68,7 +68,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  rake (~> 13.1)
+  rake (~> 13.2)
   relic_link!
   rspec (~> 3.13)
   rubocop (~> 1.61)
