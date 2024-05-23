@@ -46,7 +46,7 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.13.0)
     rspec-support (3.13.1)
-    rubocop (1.63.5)
+    rubocop (1.64.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
@@ -73,7 +73,7 @@ DEPENDENCIES
   rake (~> 13.2)
   relic_link!
   rspec (~> 3.13)
-  rubocop (~> 1.63)
+  rubocop (~> 1.64)
   vcr (~> 6.2)
 
 BUNDLED WITH
