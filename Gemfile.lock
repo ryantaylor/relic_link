@@ -24,7 +24,7 @@ GEM
     net-http (0.4.1)
       uri
     parallel (1.25.1)
-    parser (3.3.2.0)
+    parser (3.3.3.0)
       ast (~> 2.4.1)
       racc
     racc (1.8.0)
