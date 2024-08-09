@@ -29,7 +29,7 @@ module RelicLink
           @replays ||= ::Faraday.new(
             url: 'https://coh3-api.reliclink.com/game/Replay'
           ) do |f|
-            f.params[:callNum] = rand(350) + 5
+            f.params[:callNum] = rand(5..354)
 
             f.use ::RelicLink::Coh3::Faraday::Response::RaiseHttpError
             f.use ::RelicLink::Coh3::Faraday::Response::RaiseReplayError

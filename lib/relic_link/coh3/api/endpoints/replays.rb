@@ -31,10 +31,10 @@ module RelicLink
           def replay_url(options = {})
             validate_options!(options)
             get(replays, 'requestSignedReplayDownloadUri', {
-              connect_id: options[:token],
-              key:        options[:path],
-              sessionID:  options[:token]
-            })
+                  connect_id: options[:token],
+                  key: options[:path],
+                  sessionID: options[:token]
+                })
           end
 
         private
@@ -46,6 +46,7 @@ module RelicLink
             missing_str = missing.map { |s| ":#{s}" }.join(', ')
 
             raise ArgumentError, "Missing required params #{missing_str}" unless missing.empty?
+
             true
           end
         end

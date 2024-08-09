@@ -18,8 +18,8 @@ RSpec.configure do |config|
     vcr.cassette_library_dir = 'spec/fixtures'
     vcr.hook_into :faraday
     vcr.default_cassette_options = {
-      :match_requests_on => [:method,
-                             VCR.request_matchers.uri_without_param(:callNum)]
+      match_requests_on: [:method,
+                          VCR.request_matchers.uri_without_param(:callNum)]
     }
   end
 end

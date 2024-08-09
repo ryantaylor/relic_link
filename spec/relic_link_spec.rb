@@ -355,7 +355,9 @@ RSpec.describe RelicLink do
       end
 
       context 'when path has expired' do
-        let(:path) { 'replay_files_repo/coh3/profile_43362/f440f6f2106d2ef897e2dcba4748301d80c2416f0752cb746da5ad3f10f20169' }
+        let(:path) do
+          'replay_files_repo/coh3/profile_43362/f440f6f2106d2ef897e2dcba4748301d80c2416f0752cb746da5ad3f10f20169'
+        end
 
         it 'raises an expired path error' do
           VCR.use_cassette('replay_url_expired') do
