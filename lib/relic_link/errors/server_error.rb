@@ -29,6 +29,13 @@ module RelicLink
       end
     end
 
+    # Raised when a 401 is returned in an API response
+    class UnauthorizedError < HttpRequestError
+      def initialize(response)
+        super('unauthorized', response)
+      end
+    end
+
     # Raised when a 429 is returned in an API response.
     class RateLimitError < HttpRequestError
       def initialize(response)

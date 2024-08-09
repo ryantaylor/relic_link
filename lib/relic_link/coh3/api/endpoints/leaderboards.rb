@@ -14,7 +14,7 @@ module RelicLink
           # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
           # @raise [RelicLink::Errors::RateLimitError] if you're rate-limited.
           def available_leaderboards
-            get('getAvailableLeaderboards')
+            get(stats, 'getAvailableLeaderboards')
           end
 
           # Retrieve the leaderboard with the given ID. For your convenience
@@ -42,7 +42,7 @@ module RelicLink
           def leaderboard(options = {})
             raise ArgumentError, 'Required argument :leaderboard_id missing' if options[:leaderboard_id].nil?
 
-            get('getLeaderboard2', format_sort_key(options))
+            get(stats, 'getLeaderboard2', format_sort_key(options))
           end
 
         private

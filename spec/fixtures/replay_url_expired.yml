@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/game/Replay/requestSignedReplayDownloadUri?callNum=236&connect_id=z4h1rz7z7ttsam0q4ntwgew6asf3nr&key=replay_files_repo%2Fcoh3%2Fprofile_43362%2Ff440f6f2106d2ef897e2dcba4748301d80c2416f0752cb746da5ad3f10f20169&sessionID=z4h1rz7z7ttsam0q4ntwgew6asf3nr
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 09 Aug 2024 13:42:08 GMT
+      content-type:
+      - application/json;charset=utf-8
+      content-length:
+      - '10'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=0pxgzGKTKao2SRnMAxYvcOnsfNh+YOyMwY9vLd1nGS3X+tiAeyC8rLoliM0VgbS6eI4XVzYsfSgAs0xnahPIuJ5OOL0diZTUd+n6/Z1Fu1/Yv81pOXr767pYLt6o;
+        Expires=Fri, 16 Aug 2024 13:42:07 GMT; Path=/, AWSALBCORS=0pxgzGKTKao2SRnMAxYvcOnsfNh+YOyMwY9vLd1nGS3X+tiAeyC8rLoliM0VgbS6eI4XVzYsfSgAs0xnahPIuJ5OOL0diZTUd+n6/Z1Fu1/Yv81pOXr767pYLt6o;
+        Expires=Fri, 16 Aug 2024 13:42:07 GMT; Path=/; SameSite=None; Secure
+      cache-control:
+      - no-store, no-cache, must-revalidate, max-age=0
+      request-path:
+      - "/game/Replay/requestSignedReplayDownloadUri"
+    body:
+      encoding: UTF-8
+      string: "[1,null,0]"
+  recorded_at: Fri, 09 Aug 2024 13:42:07 GMT
+recorded_with: VCR 6.2.0

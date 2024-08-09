@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/game/Replay/requestSignedReplayDownloadUri?callNum=155&connect_id=z4h1rz7z7ttsam0q4ntwgew6asf3nr&key=replay_files_repo%2Fcoh3%2Fprofile_138410%2F8c5ac9dc4559011f69132a3969b9ced38bb9d19b5119e33e81336a65e6d0fe24&sessionID=z4h1rz7z7ttsam0q4ntwgew6asf3nr
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.10.1
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      date:
+      - Fri, 09 Aug 2024 13:28:14 GMT
+      content-type:
+      - application/json;charset=utf-8
+      content-length:
+      - '1837'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=N5IYyS+JdFpQ6A/IR4RD+9P1vywsHyWD0OsgW+a21KlgpXXgnc5kCma2DcFcmoptQcMLA3bo7hCGxTlWAZqOGObQmMQ+FVRQnaIWlCP/Fw4vKHGClpe+2sytqBOu;
+        Expires=Fri, 16 Aug 2024 13:28:14 GMT; Path=/, AWSALBCORS=N5IYyS+JdFpQ6A/IR4RD+9P1vywsHyWD0OsgW+a21KlgpXXgnc5kCma2DcFcmoptQcMLA3bo7hCGxTlWAZqOGObQmMQ+FVRQnaIWlCP/Fw4vKHGClpe+2sytqBOu;
+        Expires=Fri, 16 Aug 2024 13:28:14 GMT; Path=/; SameSite=None; Secure
+      cache-control:
+      - no-store, no-cache, must-revalidate, max-age=0
+      request-path:
+      - "/game/Replay/requestSignedReplayDownloadUri"
+    body:
+      encoding: UTF-8
+      string: '[0,"https://coh3-cloudfile.s3.amazonaws.com/replay_files_repo/coh3/profile_138410/8c5ac9dc4559011f69132a3969b9ced38bb9d19b5119e33e81336a65e6d0fe24?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEE0aCXVzLWVhc3QtMSJHMEUCIHbfn3CMiHU9ZvgBm51Sm9A8oBovnwlFDN0s1W59k7Y2AiEArNigB6vEXHiyolR7pdbdKFBe1l4tJuD1djjPZ7KawpgqsQUIRhAAGgwyNDAxOTE4MDg3MzkiDLMnOa0tdyNBZpJfdSqOBcqWSKpWY%2BdXwr%2Ba%2BxsEqHW8ceZoQE71MvDXnX59I%2Fv4qk6IyP7%2BVGT0wzzZlvb3WgCB2tqw%2FMGifpaxS%2Fp7GQP30ssT%2FfzJ23dubSfrWxGxL1%2B2c1gI%2BbY4qEIDknB%2BfndxgqRw%2F99mPWYNcYrstAKiNKqTNQ8uMcG1T8zmCTnpLTug3pISQySiddlIrUd%2BNwO8Dbo8cDvuWz%2FyztUCmGKFbm2527jyT9Obkk4FrAQWeqOLNjaRDxBtQ86HlwAz7BP7JC2pLSGNa5WLC%2BeR9e8qvWqYFDdcapqMvqA7Jt%2ByItJmU0W0w2bdizVAQEXhiXds8aMyA5peyKEIhlSmzkiMeJGqjGEx4n0X0G%2Fro%2FaT1YPSwCL%2FdgOO5OjLztnHHjBmokUBPnahhiItyOD4s9q3FY8jgsIinLgmVWGCoZGBNAlYgVD5%2Fwr4uPcAtrxktt6lGSM9QaOmTW%2FigLRDHjz7TWxhmuJY2dfikJ%2FWPv3auC24Vd%2BqcAl6OB0kwkVHrPH9pc%2FMsXAXEMy7AAOELXIgkf4JGGimlXiYigKykF3XZXyTAIo%2FuuXOCM%2BliViwCXmycSbqAW1XMHiGvgprGOdVAVSX7XRu6ShkiD24b9wMmYzMTcmRbhLLyPCBACE8Wa%2FAKL5tSHFcICuy3l5xh0FJPkfMq8AikHPTQNSz09NGongA%2F%2F3LZwrSVQwyRWaqnl%2FwnCsj3Xr9kXgVe80UouD0ulYAUU0K6q%2BUMNqiBKrm1SxRnYN%2BYMBaNwsSjziyMOheDflqa5x%2B924AVP%2BpDfcCs%2BO%2BUUWckdi6YeAAoRMB2W%2FMie%2BlzeVoJMVJeOhVQBifMIZFMW02j9%2BgPvxKlpJX1whyEKh5iCMskiz5pDD9pdi1BjqxAYJIfocsxDPNxktI5gghklYXphpZ5to529lQ6KCUZUg0wHB4a7jW57YmWy2qAcvYAIzuKrQ12BretNmEXz5r5Hs%2F85GhX%2Bv8oV0wMIlWV4cAGt0K4WwS44e03W93VHPnL3DFBTt5PlNr1FZlIaY2WZCbuCdhJJQDGqNBTvp2fIn4fM27hfNaLjC20H6tq8N2IdjWlOgNL3m5E6BteACxzI8UNMejXex3qJztOPnofi3GTw%3D%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240809T132814Z&X-Amz-SignedHeaders=host&X-Amz-Expires=900&X-Amz-Credential=ASIATP3EMETR37BNQSYB%2F20240809%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=cae96d45a20b74dc0eaf581c399a15edd7bdaac5d0441a1d0fdb64ac1ae3bb6b",1723210994]'
+  recorded_at: Fri, 09 Aug 2024 13:28:14 GMT
+recorded_with: VCR 6.2.0
