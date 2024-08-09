@@ -5,6 +5,8 @@ module RelicLink
     module Api
       # Errors specific to the Relic CoH3 API.
       module Errors
+        # Raised when querying for a replay URL with a path that has expired.
+        class ExpiredPath < RelicError; end
         # Raised when querying for a leaderboard that doesn't exist.
         class NotFound < RelicError; end
         # Raised when querying for aliases that don't exist.

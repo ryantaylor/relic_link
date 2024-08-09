@@ -13,7 +13,7 @@ jobs:
     strategy:
       matrix:
         ruby:
-          - '3.2'
+          - '3.2.4'
     steps:
     - uses: actions/checkout@v3
     - name: Set up Ruby
@@ -30,7 +30,7 @@ jobs:
     strategy:
       matrix:
         ruby:
-          - '3.2'
+          - '3.2.4'
     steps:
       - uses: actions/checkout@v3
       - name: Set up Ruby

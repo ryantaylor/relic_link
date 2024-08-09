@@ -5,7 +5,7 @@ module RelicLink
     # Wrapper for HTTP client +GET+ requests. You should never
     # have to use this directly.
     module Request
-      def get(path, options = {})
+      def get(connection, path, options = {})
         connection.get(path) do |req|
           req.params = req.params.merge(options)
         end.body

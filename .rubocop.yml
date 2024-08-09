@@ -8,6 +8,9 @@ Layout/AccessModifierIndentation:
 Metrics/BlockLength:
   Enabled: false
 
+Metrics/MethodLength:
+  Max: 15
+
 Style/GlobalStdStream:
   Enabled: false
 

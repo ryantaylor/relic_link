@@ -33,7 +33,7 @@ module RelicLink
               raise ArgumentError, 'Missing one of required params :profile_ids, :aliases, or :profile_names'
             end
 
-            get('getPersonalStat', array_params(options))
+            get(stats, 'getPersonalStat', array_params(options))
           end
         end
       end

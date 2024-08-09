@@ -33,7 +33,7 @@ module RelicLink
               raise ArgumentError, 'Missing one of required arguments :profile_ids, :aliases, or :profile_names'
             end
 
-            get('getRecentMatchHistory', array_params(options))
+            get(stats, 'getRecentMatchHistory', array_params(options))
           end
 
           # Retrieve the match history information for the given profile ID. Profile
@@ -51,7 +51,7 @@ module RelicLink
           def recent_match_history_by_profile_id(profile_id)
             raise ArgumentError, 'Required argument :profile_id missing' if profile_id.nil?
 
-            get('getRecentMatchHistoryByProfileId', { profile_id: })
+            get(stats, 'getRecentMatchHistoryByProfileId', { profile_id: })
           end
         end
       end

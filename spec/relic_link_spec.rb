@@ -304,5 +304,77 @@ RSpec.describe RelicLink do
         end
       end
     end
+
+    describe '.replay_url' do
+      subject(:response) { client.replay_url(token:, path:) }
+
+      let(:token) { 'z4h1rz7z7ttsam0q4ntwgew6asf3nr' }
+      let(:path) do
+        'replay_files_repo/coh3/profile_138410/8c5ac9dc4559011f69132a3969b9ced38bb9d19b5119e33e81336a65e6d0fe24'
+      end
+
+      it 'queries for a replay URL' do
+        VCR.use_cassette('replay_url_valid') do
+          expect(response[0]).to be_zero
+          expect(response[1]).not_to be_nil
+        end
+      end
+
+      context 'when token is missing' do
+        let(:token) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when path is missing' do
+        let(:path) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when all params are missing' do
+        subject(:response) { client.replay_url }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when token is invalid' do
+        let(:token) { 'nonsense' }
+
+        it 'raises an unauthorized error' do
+          VCR.use_cassette('replay_url_unauthorized') do
+            expect { response }.to raise_error(RelicLink::Errors::UnauthorizedError)
+          end
+        end
+      end
+
+      context 'when path has expired' do
+        let(:path) do
+          'replay_files_repo/coh3/profile_43362/f440f6f2106d2ef897e2dcba4748301d80c2416f0752cb746da5ad3f10f20169'
+        end
+
+        it 'raises an expired path error' do
+          VCR.use_cassette('replay_url_expired') do
+            expect { response }.to raise_error(RelicLink::Coh3::Api::Errors::ExpiredPath)
+          end
+        end
+      end
+
+      context 'when path does not exist' do
+        let(:path) { 'nonsense' }
+
+        it 'raises an expired path error' do
+          VCR.use_cassette('replay_url_missing_path') do
+            expect { response }.to raise_error(RelicLink::Coh3::Api::Errors::ExpiredPath)
+          end
+        end
+      end
+    end
   end
 end

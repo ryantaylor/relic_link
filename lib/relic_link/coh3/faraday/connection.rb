@@ -10,13 +10,29 @@ module RelicLink
       module Connection
       private
 
-        def connection
-          @connection ||= ::Faraday.new(
+        def stats
+          @stats ||= ::Faraday.new(
             url: 'https://coh3-api.reliclink.com/community/leaderboard'
           ) do |f|
             f.params[:title] = 'coh3'
 
-            f.use ::RelicLink::Coh3::Faraday::Response::RaiseError
+            f.use ::RelicLink::Coh3::Faraday::Response::RaiseHttpError
+            f.use ::RelicLink::Coh3::Faraday::Response::RaiseStatsError
+            f.response :mashify
+            f.response :json
+            f.use ::RelicLink::Faraday::Response::WrapError
+            f.response :logger, logger if logger
+          end
+        end
+
+        def replays
+          @replays ||= ::Faraday.new(
+            url: 'https://coh3-api.reliclink.com/game/Replay'
+          ) do |f|
+            f.params[:callNum] = rand(5..354)
+
+            f.use ::RelicLink::Coh3::Faraday::Response::RaiseHttpError
+            f.use ::RelicLink::Coh3::Faraday::Response::RaiseReplayError
             f.response :mashify
             f.response :json
             f.use ::RelicLink::Faraday::Response::WrapError
