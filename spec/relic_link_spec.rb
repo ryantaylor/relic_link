@@ -2,7 +2,7 @@
 
 RSpec.describe RelicLink do
   it 'has a version number' do
-    expect(RelicLink::VERSION).to_not be nil
+    expect(RelicLink::VERSION).not_to be_nil
   end
 
   describe 'client' do
@@ -13,7 +13,7 @@ RSpec.describe RelicLink do
         VCR.use_cassette('personal_stats_profile_ids') do
           body = client.personal_stats(profile_ids: [8230])
           expect(body.dig('result', 'code')).to be_zero
-          expect(body['statGroups'].first['members']).to_not be_empty
+          expect(body['statGroups'].first['members']).not_to be_empty
         end
       end
 
@@ -39,7 +39,7 @@ RSpec.describe RelicLink do
         VCR.use_cassette('personal_stats_aliases') do
           body = client.personal_stats(aliases: %w[Inverse])
           expect(body.dig('result', 'code')).to be_zero
-          expect(body['statGroups'].first['members']).to_not be_empty
+          expect(body['statGroups'].first['members']).not_to be_empty
         end
       end
 
@@ -65,7 +65,7 @@ RSpec.describe RelicLink do
         VCR.use_cassette('personal_stats_steam_ids') do
           body = client.personal_stats(profile_names: %w[/steam/76561197999799366])
           expect(body.dig('result', 'code')).to be_zero
-          expect(body['statGroups'].first['members']).to_not be_empty
+          expect(body['statGroups'].first['members']).not_to be_empty
         end
       end
 
@@ -93,7 +93,7 @@ RSpec.describe RelicLink do
         VCR.use_cassette('recent_match_history_profile_ids') do
           body = client.recent_match_history(profile_ids: [8230])
           expect(body.dig('result', 'code')).to be_zero
-          expect(body['matchHistoryStats']).to_not be_empty
+          expect(body['matchHistoryStats']).not_to be_empty
         end
       end
 
@@ -119,7 +119,7 @@ RSpec.describe RelicLink do
         VCR.use_cassette('recent_match_history_aliases') do
           body = client.recent_match_history(aliases: %w[Inverse])
           expect(body.dig('result', 'code')).to be_zero
-          expect(body['matchHistoryStats']).to_not be_empty
+          expect(body['matchHistoryStats']).not_to be_empty
         end
       end
 
@@ -145,7 +145,7 @@ RSpec.describe RelicLink do
         VCR.use_cassette('recent_match_history_steam_ids') do
           body = client.recent_match_history(profile_names: %w[/steam/76561197999799366])
           expect(body.dig('result', 'code')).to be_zero
-          expect(body['matchHistoryStats']).to_not be_empty
+          expect(body['matchHistoryStats']).not_to be_empty
         end
       end
 
@@ -173,7 +173,7 @@ RSpec.describe RelicLink do
         VCR.use_cassette('recent_match_history_by_profile_id') do
           body = client.recent_match_history_by_profile_id(8230)
           expect(body.dig('result', 'code')).to be_zero
-          expect(body['matchHistoryStats']).to_not be_empty
+          expect(body['matchHistoryStats']).not_to be_empty
         end
       end
 
@@ -202,11 +202,11 @@ RSpec.describe RelicLink do
         VCR.use_cassette('available_leaderboards') do
           body = client.available_leaderboards
           expect(body.dig('result', 'code')).to be_zero
-          expect(body['leaderboards']).to_not be_empty
-          expect(body['matchTypes']).to_not be_empty
-          expect(body['races']).to_not be_empty
-          expect(body['factions']).to_not be_empty
-          expect(body['leaderboardRegions']).to_not be_empty
+          expect(body['leaderboards']).not_to be_empty
+          expect(body['matchTypes']).not_to be_empty
+          expect(body['races']).not_to be_empty
+          expect(body['factions']).not_to be_empty
+          expect(body['leaderboardRegions']).not_to be_empty
         end
       end
     end

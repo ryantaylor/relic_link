@@ -1,3 +1,7 @@
+require:
+  - rubocop-rake
+  - rubocop-rspec
+
 AllCops:
   TargetRubyVersion: 3.1
   NewCops: enable
@@ -10,6 +14,36 @@ Metrics/BlockLength:
 
 Metrics/MethodLength:
   Max: 15
+
+Rake/Desc:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 10
+
+RSpec/HookArgument:
+  Enabled: false
+
+RSpec/MessageChain:
+  Enabled: false
+
+RSpec/MessageSpies:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
 
 Style/GlobalStdStream:
   Enabled: false
