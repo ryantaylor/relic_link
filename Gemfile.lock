@@ -10,6 +10,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    base64 (0.2.0)
     diff-lcs (1.5.1)
     faraday (2.10.1)
       faraday-net_http (>= 2.0, < 3.2)
@@ -69,7 +70,8 @@ GEM
     strscan (3.1.0)
     unicode-display_width (2.5.0)
     uri (0.13.0)
-    vcr (6.2.0)
+    vcr (6.3.1)
+      base64
 
 PLATFORMS
   arm64-darwin-21
@@ -83,7 +85,7 @@ DEPENDENCIES
   rubocop (~> 1.65)
   rubocop-rake
   rubocop-rspec
-  vcr (~> 6.2)
+  vcr (~> 6.3)
 
 BUNDLED WITH
    2.5.17
