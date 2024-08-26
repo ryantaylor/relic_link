@@ -12,13 +12,13 @@ GEM
     ast (2.4.2)
     base64 (0.2.0)
     diff-lcs (1.5.1)
-    faraday (2.10.1)
-      faraday-net_http (>= 2.0, < 3.2)
+    faraday (2.11.0)
+      faraday-net_http (>= 2.0, < 3.4)
       logger
     faraday-mashify (0.1.1)
       faraday (~> 2.0)
       hashie
-    faraday-net_http (3.1.1)
+    faraday-net_http (3.3.0)
       net-http
     hashie (5.0.0)
     json (2.7.2)
