@@ -23,7 +23,7 @@ GEM
     hashie (5.0.0)
     json (2.7.2)
     language_server-protocol (3.17.0.3)
-    logger (1.6.0)
+    logger (1.6.1)
     net-http (0.4.1)
       uri
     parallel (1.26.3)
