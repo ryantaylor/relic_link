@@ -14,6 +14,8 @@ module RelicLink
           @stats ||= ::Faraday.new(
             url: 'https://coh3-api.reliclink.com/community/leaderboard'
           ) do |f|
+            ::Faraday::Mashify::Middleware.mash_class = ResponseMash
+
             f.params[:title] = 'coh3'
 
             f.use ::RelicLink::Coh3::Faraday::Response::RaiseHttpError
@@ -29,6 +31,8 @@ module RelicLink
           @replays ||= ::Faraday.new(
             url: 'https://coh3-api.reliclink.com/game/Replay'
           ) do |f|
+            ::Faraday::Mashify::Middleware.mash_class = ResponseMash
+
             f.params[:callNum] = rand(5..354)
 
             f.use ::RelicLink::Coh3::Faraday::Response::RaiseHttpError
