@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'faraday', '~> 2.7'
-  spec.add_dependency 'faraday-mashify', '~> 0.1'
+  spec.add_dependency 'faraday-mashify', '>= 0.1', '< 2.0'
   spec.add_dependency 'hashie', '~> 5.0'
 
   spec.metadata['rubygems_mfa_required'] = 'true'
