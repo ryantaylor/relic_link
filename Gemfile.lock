@@ -12,7 +12,7 @@ GEM
     ast (2.4.3)
     base64 (0.2.0)
     diff-lcs (1.6.1)
-    faraday (2.13.0)
+    faraday (2.13.1)
       faraday-net_http (>= 2.0, < 3.5)
       json
       logger
@@ -22,7 +22,7 @@ GEM
     faraday-net_http (3.4.0)
       net-http (>= 0.5.0)
     hashie (5.0.0)
-    json (2.11.2)
+    json (2.11.3)
     language_server-protocol (3.17.0.4)
     lint_roller (1.1.0)
     logger (1.7.0)
