@@ -19,8 +19,8 @@ GEM
     faraday-mashify (1.0.0)
       faraday (~> 2.0)
       hashie
-    faraday-net_http (3.4.1)
-      net-http (>= 0.5.0)
+    faraday-net_http (3.4.2)
+      net-http (~> 0.5)
     hashie (5.0.0)
     json (2.16.0)
     language_server-protocol (3.17.0.5)
