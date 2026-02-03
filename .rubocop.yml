@@ -1,4 +1,4 @@
-require:
+plugins:
   - rubocop-rake
   - rubocop-rspec
 
@@ -14,6 +14,9 @@ Metrics/BlockLength:
 
 Metrics/MethodLength:
   Max: 15
+
+Naming/PredicateMethod:
+  Enabled: false
 
 Rake/Desc:
   Enabled: false
