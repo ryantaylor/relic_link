@@ -25,7 +25,7 @@ GEM
       net-http (~> 0.5)
     hashie (5.1.0)
       logger
-    json (2.18.1)
+    json (2.19.0)
     json-schema (5.2.2)
       addressable (~> 2.8)
       bigdecimal (~> 3.1)
