@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require_relative 'endpoints/advertisements'
 require_relative 'endpoints/leaderboards'
 require_relative 'endpoints/matches'
 require_relative 'endpoints/replays'
@@ -9,6 +10,7 @@ module RelicLink
   module Coh3
     module Api
       module Endpoints
+        include Advertisements
         include Leaderboards
         include Matches
         include Replays
