@@ -387,9 +387,10 @@ RSpec.describe RelicLink do
       let(:data_checksum)       { -427_292_781 }
       let(:app_binary_checksum) { 46_121 }
 
-      it 'returns a list of active observable advertisements' do
+      it 'returns the raw API response' do
         VCR.use_cassette('find_observable_advertisements') do
-          expect(response).to be_an(Array)
+          expect(response[0]).to eq(0)
+          expect(response[1]).to be_an(Array)
         end
       end
 
@@ -439,9 +440,10 @@ RSpec.describe RelicLink do
       let(:app_binary_checksum) { 46_121 }
       let(:matchtype_id)        { 0 }
 
-      it 'returns a list of active advertisements' do
+      it 'returns the raw API response' do
         VCR.use_cassette('find_advertisements') do
-          expect(response).to be_an(Array)
+          expect(response[0]).to eq(0)
+          expect(response[1]).to be_an(Array)
         end
       end
 

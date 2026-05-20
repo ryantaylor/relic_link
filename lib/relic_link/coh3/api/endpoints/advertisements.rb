@@ -25,11 +25,13 @@ module RelicLink
           #
           # @raise [ArgumentError] if one of the required parameters are not provided.
           # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
+          # @raise [RelicLink::Errors::RateLimitError] if you're rate-limited.
           # @raise [RelicLink::Errors::UnauthorizedError] if the +token+ provided is invalid.
+          # @raise [RelicLink::Errors::BadRequestError] if inputs are missing or violate type constraints.
           def find_observable_advertisements(options = {})
-            validate_advertisement_options!(options)
+            validate_observable_advertisements_options!(options)
             get(advertisements, 'findObservableAdvertisements',
-                observable_advertisement_params(options))[1]
+                observable_advertisements_params(options))
           end
 
           # Fetch active game lobbies (ranked and custom) for a given match type.
@@ -49,16 +51,18 @@ module RelicLink
           #
           # @raise [ArgumentError] if one of the required parameters are not provided.
           # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
+          # @raise [RelicLink::Errors::RateLimitError] if you're rate-limited.
           # @raise [RelicLink::Errors::UnauthorizedError] if the +token+ provided is invalid.
+          # @raise [RelicLink::Errors::BadRequestError] if inputs are missing or violate type constraints.
           def find_advertisements(options = {})
             validate_advertisements_options!(options)
             get(advertisements, 'findAdvertisements',
-                advertisements_params(options))[1]
+                advertisements_params(options))
           end
 
         private
 
-          def observable_advertisement_params(options)
+          def observable_advertisements_params(options)
             base_advertisement_params(options).merge(observerGroupID: -2)
           end
 
@@ -85,7 +89,7 @@ module RelicLink
             }
           end
 
-          def validate_advertisement_options!(options)
+          def validate_observable_advertisements_options!(options)
             missing = []
             missing << 'token'               if options[:token].nil?
             missing << 'data_checksum'       if options[:data_checksum].nil?
@@ -98,10 +102,16 @@ module RelicLink
           end
 
           def validate_advertisements_options!(options)
-            validate_advertisement_options!(options)
-            return if options[:matchtype_id]
+            missing = []
+            missing << 'token'               if options[:token].nil?
+            missing << 'data_checksum'       if options[:data_checksum].nil?
+            missing << 'app_binary_checksum' if options[:app_binary_checksum].nil?
+            missing << 'matchtype_id'        if options[:matchtype_id].nil?
+            missing_str = missing.map { |s| ":#{s}" }.join(', ')
 
-            raise ArgumentError, 'Missing required params :matchtype_id'
+            raise ArgumentError, "Missing required params #{missing_str}" unless missing.empty?
+
+            true
           end
         end
       end
