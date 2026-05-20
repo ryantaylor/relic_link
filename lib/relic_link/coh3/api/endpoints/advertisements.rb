@@ -45,9 +45,9 @@ module RelicLink
           # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
           # @raise [RelicLink::Errors::UnauthorizedError] if the +token+ provided is invalid.
           def find_advertisements(options = {})
-            validate_advertisement_options!(options)
+            validate_advertisements_options!(options)
             fetch_all_advertisement_pages('findAdvertisements',
-                                          base_advertisement_params(options))
+                                          advertisements_params(options))
           end
 
         private
@@ -87,6 +87,10 @@ module RelicLink
             }
           end
 
+          def advertisements_params(options)
+            base_advertisement_params(options).merge(matchtype_id: options[:matchtype_id])
+          end
+
           def validate_advertisement_options!(options)
             missing = []
             missing << 'token'               if options[:token].nil?
@@ -97,6 +101,13 @@ module RelicLink
             raise ArgumentError, "Missing required params #{missing_str}" unless missing.empty?
 
             true
+          end
+
+          def validate_advertisements_options!(options)
+            validate_advertisement_options!(options)
+            return if options[:matchtype_id]
+
+            raise ArgumentError, 'Missing required params :matchtype_id'
           end
         end
       end

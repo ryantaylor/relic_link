@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://coh3-api.reliclink.com/game/advertisement/findAdvertisements?appBinaryChecksum=46121&callNum=806&connect_id=placeholder&count=20&dataChecksum=-427292781&desc=0&modDLLChecksum=0&modDLLFile=INVALID&modName=INVALID&modVersion=INVALID&sessionID=placeholder&sortOrder=0&start=0&versionFlags=0
+    uri: https://coh3-api.reliclink.com/game/advertisement/findAdvertisements?appBinaryChecksum=46121&callNum=640&connect_id=placeholder&count=20&dataChecksum=-427292781&desc=0&matchtype_id=0&modDLLChecksum=0&modDLLFile=INVALID&modName=INVALID&modVersion=INVALID&sessionID=placeholder&sortOrder=0&start=0&versionFlags=0
     body:
       encoding: US-ASCII
       string: ''
@@ -15,7 +15,7 @@ http_interactions:
       message: Unauthorized
     headers:
       date:
-      - Wed, 20 May 2026 17:54:49 GMT
+      - Wed, 20 May 2026 21:57:42 GMT
       content-type:
       - text/html;charset=iso-8859-1
       content-length:
@@ -23,9 +23,9 @@ http_interactions:
       connection:
       - keep-alive
       set-cookie:
-      - AWSALB=dWk5sTgAyV4/50ygS4WHRse3exqcv3/bMUkNXFrVRelPDkf181/EK4mvG16hDJuIZHocmf7W5hutYVw2iaM4dVr3kvM5KOnuWT05gia+zrCpHOmrzRFoV3hYcaum;
-        Expires=Wed, 27 May 2026 17:54:49 GMT; Path=/, AWSALBCORS=dWk5sTgAyV4/50ygS4WHRse3exqcv3/bMUkNXFrVRelPDkf181/EK4mvG16hDJuIZHocmf7W5hutYVw2iaM4dVr3kvM5KOnuWT05gia+zrCpHOmrzRFoV3hYcaum;
-        Expires=Wed, 27 May 2026 17:54:49 GMT; Path=/; SameSite=None; Secure
+      - AWSALB=J3U+jLxy0snfFSP5xXxxDK+RnCnnd/BjiXHwRz22n+SBEqognieqYuHbRNPbapTRep8UO8g3IWxSP40j3Z/XJIkA9sn3JW/9EuvX2rAemZReplcdyoY5Bfo/oA77;
+        Expires=Wed, 27 May 2026 21:57:42 GMT; Path=/, AWSALBCORS=J3U+jLxy0snfFSP5xXxxDK+RnCnnd/BjiXHwRz22n+SBEqognieqYuHbRNPbapTRep8UO8g3IWxSP40j3Z/XJIkA9sn3JW/9EuvX2rAemZReplcdyoY5Bfo/oA77;
+        Expires=Wed, 27 May 2026 21:57:42 GMT; Path=/; SameSite=None; Secure
       request-path:
       - "/game/advertisement/findAdvertisements"
       cache-control:
@@ -48,5 +48,5 @@ http_interactions:
 
         </body>
         </html>
-  recorded_at: Wed, 20 May 2026 17:54:48 GMT
+  recorded_at: Wed, 20 May 2026 21:57:42 GMT
 recorded_with: VCR 6.3.1

@@ -430,18 +430,16 @@ RSpec.describe RelicLink do
 
     describe '.find_advertisements' do
       subject(:response) do
-        client.find_advertisements(token:, data_checksum:, app_binary_checksum:)
+        client.find_advertisements(token:, data_checksum:, app_binary_checksum:, matchtype_id:)
       end
 
-      # Token to use when recording the VCR cassette — will be expired, safe to commit
-      let(:token)               { 'rzyigqhqet3m5al2amdoopl3qx1tg3' }
+      # Token recorded in VCR cassette — expired, safe to commit
+      let(:token)               { 'px8plwz5cry88uf256rupe4ewb4jyw' }
       let(:data_checksum)       { -427_292_781 }
       let(:app_binary_checksum) { 46_121 }
+      let(:matchtype_id)        { 0 }
 
-      # This endpoint returns 400 with the same parameters as findObservableAdvertisements.
-      # It likely requires additional parameters (e.g. matchtype_id) — needs further investigation.
       it 'returns a list of active advertisements' do
-        pending 'findAdvertisements parameter requirements need further investigation'
         VCR.use_cassette('find_advertisements') do
           expect(response).to be_an(Array)
         end
@@ -465,6 +463,14 @@ RSpec.describe RelicLink do
 
       context 'when app_binary_checksum is missing' do
         let(:app_binary_checksum) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when matchtype_id is missing' do
+        let(:matchtype_id) { nil }
 
         it 'raises an argument error' do
           expect { response }.to raise_error(ArgumentError)
