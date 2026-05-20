@@ -20,8 +20,8 @@ module RelicLink
           #   PE build number of the game binary (required)
           # @option options [Integer] :start (0)
           #   Zero-based index of the first result to return.
-          # @option options [Integer] :count (20)
-          #   Number of results to return. Maximum 20.
+          # @option options [Integer] :count (200)
+          #   Number of results to return. Must be an integer between 1 and 200.
           #
           # @raise [ArgumentError] if one of the required parameters are not provided.
           # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
@@ -44,8 +44,8 @@ module RelicLink
           #   Match type to filter by (required)
           # @option options [Integer] :start (0)
           #   Zero-based index of the first result to return.
-          # @option options [Integer] :count (20)
-          #   Number of results to return. Maximum 20.
+          # @option options [Integer] :count (200)
+          #   Number of results to return. Must be an integer between 1 and 200.
           #
           # @raise [ArgumentError] if one of the required parameters are not provided.
           # @raise [RelicLink::Errors::ServerError] if Relic's API is down.
@@ -81,7 +81,7 @@ module RelicLink
               desc: 0,
               sortOrder: 0,
               start: options.fetch(:start, 0),
-              count: options.fetch(:count, 20)
+              count: options.fetch(:count, 200)
             }
           end
 
