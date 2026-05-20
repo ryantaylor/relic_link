@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://coh3-api.reliclink.com/game/advertisement/findAdvertisements?appBinaryChecksum=46121&callNum=146&connect_id=placeholder&count=20&dataChecksum=-427292781&desc=0&modDLLChecksum=0&modDLLFile=INVALID&modName=INVALID&modVersion=INVALID&sessionID=placeholder&sortOrder=0&start=0&versionFlags=0
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.11.0
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      date:
+      - Wed, 20 May 2026 17:59:06 GMT
+      content-type:
+      - text/html;charset=iso-8859-1
+      content-length:
+      - '411'
+      connection:
+      - keep-alive
+      set-cookie:
+      - AWSALB=gjB2FX+dIvGPYRnhAPbkE1K89kZ5PKb91JhQjyChpAvJd8Ke75JjhBRZc7QOyvSftd9lqAugP5Xk+wvDMmDJGFO/InWotPmL7BsgSnJQLC4QSfEeNfHaCOktFXcO;
+        Expires=Wed, 27 May 2026 17:59:06 GMT; Path=/, AWSALBCORS=gjB2FX+dIvGPYRnhAPbkE1K89kZ5PKb91JhQjyChpAvJd8Ke75JjhBRZc7QOyvSftd9lqAugP5Xk+wvDMmDJGFO/InWotPmL7BsgSnJQLC4QSfEeNfHaCOktFXcO;
+        Expires=Wed, 27 May 2026 17:59:06 GMT; Path=/; SameSite=None; Secure
+      request-path:
+      - "/game/advertisement/findAdvertisements"
+      cache-control:
+      - must-revalidate,no-cache,no-store
+    body:
+      encoding: ISO-8859-1
+      string: |
+        <html>
+        <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-1"/>
+        <title>Error 401 Unauthorized</title>
+        </head>
+        <body><h2>HTTP ERROR 401 Unauthorized</h2>
+        <table>
+        <tr><th>URI:</th><td>/game/advertisement/findAdvertisements</td></tr>
+        <tr><th>STATUS:</th><td>401</td></tr>
+        <tr><th>MESSAGE:</th><td>Unauthorized</td></tr>
+        <tr><th>SERVLET:</th><td>worldwide</td></tr>
+        </table>
+
+        </body>
+        </html>
+  recorded_at: Wed, 20 May 2026 17:59:06 GMT
+recorded_with: VCR 6.3.1

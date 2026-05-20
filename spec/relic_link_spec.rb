@@ -433,7 +433,8 @@ RSpec.describe RelicLink do
         client.find_advertisements(token:, data_checksum:, app_binary_checksum:)
       end
 
-      let(:token)               { 'placeholder' }
+      # Token to use when recording the VCR cassette — will be expired, safe to commit
+      let(:token)               { 'rzyigqhqet3m5al2amdoopl3qx1tg3' }
       let(:data_checksum)       { -427_292_781 }
       let(:app_binary_checksum) { 46_121 }
 
@@ -471,6 +472,8 @@ RSpec.describe RelicLink do
       end
 
       context 'when token is invalid' do
+        let(:token) { 'placeholder' }
+
         it 'raises an unauthorized error' do
           VCR.use_cassette('find_advertisements_unauthorized') do
             expect { response }.to raise_error(RelicLink::Errors::UnauthorizedError)
