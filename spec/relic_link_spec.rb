@@ -383,7 +383,7 @@ RSpec.describe RelicLink do
       end
 
       # Token recorded in VCR cassette — expired, safe to commit
-      let(:token)               { 'bg5ljklyiryt6zasozqd6wseu3fjp4' }
+      let(:token)               { '16x8x6n52rq976ltijh7r2mabqyyre' }
       let(:data_checksum)       { -427_292_781 }
       let(:app_binary_checksum) { 46_121 }
 
@@ -434,7 +434,7 @@ RSpec.describe RelicLink do
       end
 
       # Token recorded in VCR cassette — expired, safe to commit
-      let(:token)               { 'px8plwz5cry88uf256rupe4ewb4jyw' }
+      let(:token)               { '16x8x6n52rq976ltijh7r2mabqyyre' }
       let(:data_checksum)       { -427_292_781 }
       let(:app_binary_checksum) { 46_121 }
       let(:matchtype_id)        { 0 }
