@@ -376,5 +376,101 @@ RSpec.describe RelicLink do
         end
       end
     end
+
+    describe '.find_observable_advertisements' do
+      subject(:response) do
+        client.find_observable_advertisements(token:, data_checksum:, app_binary_checksum:)
+      end
+
+      let(:token)               { 'placeholder' }
+      let(:data_checksum)       { -427_292_781 }
+      let(:app_binary_checksum) { 46_121 }
+
+      it 'returns a list of active observable advertisements' do
+        VCR.use_cassette('find_observable_advertisements') do
+          expect(response).to be_an(Array)
+        end
+      end
+
+      context 'when token is missing' do
+        let(:token) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when data_checksum is missing' do
+        let(:data_checksum) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when app_binary_checksum is missing' do
+        let(:app_binary_checksum) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when token is invalid' do
+        it 'raises an unauthorized error' do
+          VCR.use_cassette('find_observable_advertisements_unauthorized') do
+            expect { response }.to raise_error(RelicLink::Errors::UnauthorizedError)
+          end
+        end
+      end
+    end
+
+    describe '.find_advertisements' do
+      subject(:response) do
+        client.find_advertisements(token:, data_checksum:, app_binary_checksum:)
+      end
+
+      let(:token)               { 'placeholder' }
+      let(:data_checksum)       { -427_292_781 }
+      let(:app_binary_checksum) { 46_121 }
+
+      it 'returns a list of active advertisements' do
+        VCR.use_cassette('find_advertisements') do
+          expect(response).to be_an(Array)
+        end
+      end
+
+      context 'when token is missing' do
+        let(:token) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when data_checksum is missing' do
+        let(:data_checksum) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when app_binary_checksum is missing' do
+        let(:app_binary_checksum) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when token is invalid' do
+        it 'raises an unauthorized error' do
+          VCR.use_cassette('find_advertisements_unauthorized') do
+            expect { response }.to raise_error(RelicLink::Errors::UnauthorizedError)
+          end
+        end
+      end
+    end
   end
 end
