@@ -101,7 +101,7 @@ module RelicLink
             true
           end
 
-          def validate_advertisements_options!(options)
+          def validate_advertisements_options!(options) # rubocop:disable Metrics/AbcSize
             missing = []
             missing << 'token'               if options[:token].nil?
             missing << 'data_checksum'       if options[:data_checksum].nil?
