@@ -376,5 +376,118 @@ RSpec.describe RelicLink do
         end
       end
     end
+
+    describe '.find_observable_advertisements' do
+      subject(:response) do
+        client.find_observable_advertisements(token:, data_checksum:, app_binary_checksum:)
+      end
+
+      # Token recorded in VCR cassette — expired, safe to commit
+      let(:token)               { 'zijatbtmztyig9d1rq0eqgmmqmlua9' }
+      let(:data_checksum)       { -427_292_781 }
+      let(:app_binary_checksum) { 46_121 }
+
+      it 'returns the raw API response' do
+        VCR.use_cassette('find_observable_advertisements') do
+          expect(response[0]).to eq(0)
+          expect(response[1]).to be_an(Array)
+        end
+      end
+
+      context 'when token is missing' do
+        let(:token) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when data_checksum is missing' do
+        let(:data_checksum) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when app_binary_checksum is missing' do
+        let(:app_binary_checksum) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when token is invalid' do
+        let(:token) { 'placeholder' }
+
+        it 'raises an unauthorized error' do
+          VCR.use_cassette('find_observable_advertisements_unauthorized') do
+            expect { response }.to raise_error(RelicLink::Errors::UnauthorizedError)
+          end
+        end
+      end
+    end
+
+    describe '.find_advertisements' do
+      subject(:response) do
+        client.find_advertisements(token:, data_checksum:, app_binary_checksum:, matchtype_id:)
+      end
+
+      # Token recorded in VCR cassette — expired, safe to commit
+      let(:token)               { 'zijatbtmztyig9d1rq0eqgmmqmlua9' }
+      let(:data_checksum)       { -427_292_781 }
+      let(:app_binary_checksum) { 46_121 }
+      let(:matchtype_id)        { 0 }
+
+      it 'returns the raw API response' do
+        VCR.use_cassette('find_advertisements') do
+          expect(response[0]).to eq(0)
+          expect(response[1]).to be_an(Array)
+        end
+      end
+
+      context 'when token is missing' do
+        let(:token) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when data_checksum is missing' do
+        let(:data_checksum) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when app_binary_checksum is missing' do
+        let(:app_binary_checksum) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when matchtype_id is missing' do
+        let(:matchtype_id) { nil }
+
+        it 'raises an argument error' do
+          expect { response }.to raise_error(ArgumentError)
+        end
+      end
+
+      context 'when token is invalid' do
+        let(:token) { 'placeholder' }
+
+        it 'raises an unauthorized error' do
+          VCR.use_cassette('find_advertisements_unauthorized') do
+            expect { response }.to raise_error(RelicLink::Errors::UnauthorizedError)
+          end
+        end
+      end
+    end
   end
 end

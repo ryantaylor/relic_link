@@ -43,6 +43,21 @@ module RelicLink
             f.response :logger, logger if logger
           end
         end
+
+        def advertisements
+          @advertisements ||= ::Faraday.new(
+            url: 'https://coh3-api.reliclink.com/game/advertisement'
+          ) do |f|
+            ::Faraday::Mashify::Middleware.mash_class = ResponseMash
+
+            f.use ::RelicLink::Coh3::Faraday::Response::RaiseHttpError
+            f.use ::RelicLink::Coh3::Faraday::Response::RaiseAdvertisementError
+            f.response :mashify
+            f.response :json
+            f.use ::RelicLink::Faraday::Response::WrapError
+            f.response :logger, logger if logger
+          end
+        end
       end
     end
   end
