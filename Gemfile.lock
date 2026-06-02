@@ -18,7 +18,7 @@ GEM
     faraday-mashify (1.0.2)
       faraday (~> 2.0)
       hashie
-    faraday-net_http (3.4.2)
+    faraday-net_http (3.4.4)
       net-http (~> 0.5)
     hashie (5.1.0)
       logger
